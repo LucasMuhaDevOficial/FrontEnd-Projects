@@ -6,15 +6,17 @@
     <title>Portfolio-Lucas Martinez</title>
 </head>
 <body>
-    
+    <link href="index.css" type="text/css" media="screen">
+    <link href="index.js" type="text/js">
 <div class="about-me">
     <h1>My name is Lucas Martinez Scordamaglia</h1>
     <p>I Have 16 Years Old, I am currently studying with a focus on becoming a front end web developer</p>
 </div>
 
 <div class="Personal-Content">
-   <div class="Person-Name">
-
+   <div class="Apresentação">
+    <h1>Lucas Martinez</h1>
+    <a href="programmer.png"></a>
    </div> 
 </div>
 
@@ -38,7 +40,29 @@
     </section>
 </div>
 
-<div class="contact-me">
+<section id="Contact">
+    <h2>Options For contact</h2>
+    <a href="https://github.com/LucasFrontEnd21122007">Github</a required>
+    <a href="https://discord.com/channels/@me">Discord</a required>
+</section required>
+
+<form action="processar_formulario.js" method="post">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+    <label for="duvidas">Dúvidas:</label>
+    <textarea id="duvidas" name="duvidas" rows="4"></textarea>
+
+    <button type="submit">Enviar Mensagem</button>
+</form>
+</section>
+
 
 <div>
     <p>&copy; 2024 Lucas Martinez</p>
