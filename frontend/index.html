@@ -1,72 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio-Lucas Martinez</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Pessoas com Deficiência</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <link href="index.css" type="text/css" media="screen">
-    <link href="index.js" type="text/js">
-<div class="about-me">
-    <h1>My name is Lucas Martinez Scordamaglia</h1>
-    <p>I Have 16 Years Old, I am currently studying with a focus on becoming a front end web developer</p>
-</div>
+  <div id="app">
+    <h1>Cadastro de Pessoas com Deficiência</h1>
+    <form @submit.prevent="submitForm">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" v-model="nome" required>
 
-<div class="Personal-Content">
-   <div class="Apresentação">
-    <h1>Lucas Martinez</h1>
-    <a href="programmer.png"></a>
-   </div> 
-</div>
+      <label for="deficiencia">Tipo de Deficiência:</label>
+      <input type="text" id="deficiencia" v-model="deficiencia" required>
 
-<div class="My Projects">
-    <text id="FormProject">Creating a Contact Page</text>
-    <text id="technologies">HTML,CSS,JS</text>
-    <Link href="https://github.com/LucasFrontEnd21122007/commerce2k23">Page the Shopping</text>
-    <Link href="https://github.com/LucasFrontEnd21122007/application-1.0">Application</text>
-</div>
+      <button type="submit">Cadastrar</button>
+    </form>
 
-<div class="my Personal Skills">
-    <section id="My Skills">
-        <ul>
-            <li>Web Developer FrontEnd</li>
-            <li>Responsive Design (UI/UX)</li>
-            <li>Programming in Javascript</li>
-            <li>HTML,CSS</li>
-            <li>JS,Typescript</li>
-            <li>React</li>
-        </ul>
-    </section>
-</div>
+    <div v-if="pessoas.length > 0">
+      <h2>Pessoas Cadastradas:</h2>
+      <ul>
+        <li v-for="(pessoa, index) in pessoas" :key="index">
+          <strong>{{ pessoa.nome }}</strong> - {{ pessoa.deficiencia }}
+        </li>
+      </ul>
+    </div>
+  </div>
 
-<section id="Contact">
-    <h2>Options For contact</h2>
-    <a href="https://github.com/LucasFrontEnd21122007">Github</a required>
-    <a href="https://discord.com/channels/@me">Discord</a required>
-</section required>
-
-<form action="processar_formulario.js" method="post">
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" required>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="mensagem">Mensagem:</label>
-    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-
-    <label for="duvidas">Dúvidas:</label>
-    <textarea id="duvidas" name="duvidas" rows="4"></textarea>
-
-    <button type="submit">Enviar Mensagem</button>
-</form>
-</section>
-
-
-<div>
-    <p>&copy; 2024 Lucas Martinez</p>
-</div>
-
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="index.js"></script>
 </body>
 </html>
