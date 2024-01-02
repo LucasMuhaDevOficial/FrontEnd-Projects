@@ -1,35 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro de Pessoas com Deficiência</title>
-  <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-  <div id="app">
-    <h1>Cadastro de Pessoas com Deficiência</h1>
-    <form @submit.prevent="submitForm">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" v-model="nome" required>
-
-      <label for="deficiencia">Tipo de Deficiência:</label>
-      <input type="text" id="deficiencia" v-model="deficiencia" required>
-
-      <button type="submit">Cadastrar</button>
-    </form>
-
-    <div v-if="pessoas.length > 0">
-      <h2>Pessoas Cadastradas:</h2>
-      <ul>
-        <li v-for="(pessoa, index) in pessoas" :key="index">
-          <strong>{{ pessoa.nome }}</strong> - {{ pessoa.deficiencia }}
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-  <script src="index.js"></script>
+    
 </body>
 </html>
