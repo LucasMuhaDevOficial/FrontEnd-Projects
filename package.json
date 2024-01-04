@@ -1,0 +1,7 @@
+{
+    "name":"CEP registration",
+    "version":"1.0.0",
+     "description":"will be used to know the exact location of deliveries",
+     "dependencies":"svelte",
+     
+}
